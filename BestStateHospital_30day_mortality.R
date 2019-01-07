@@ -1,4 +1,4 @@
-## Best State Hospital for 30 day Mortality
+## 2) Finding the best hospital in a state
 
 outcomes <- read.csv("outcome-of-care-measures.csv", colClasses = "character")
 head(str(outcomes))
