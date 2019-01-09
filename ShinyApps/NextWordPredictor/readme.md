@@ -4,7 +4,7 @@ Type in at least 3 words and [this app](https://wyquek71.shinyapps.io/Capstone_w
 ![image of ahinyapps](https://github.com/qwyeow/JHU_DataScience/blob/master/ShinyApps/NextWordPredictor/NextWordPredictor_screenshot.png)
 
 
-## EDA
+## Exploratory Data Analysis
 
 ### Downloading source files
 
