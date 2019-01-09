@@ -113,12 +113,12 @@ From the output, we can see that there are 5389 words that appeared once and 142
 ```
 head(table(freq), 15)
 ```
-**Frequency**
+**Frequency" Num = Number of times the word appeared;Freq = number of words with this frequency  **
 
 |   |    |      |      |      |       |      |      |      |      |       |         |     |      |      |      |  
 |:---|:--- |:----:|:----:|:----:| :----:|:--- |:----:|:----:|:----:| :----:|   :----:|:--- |:----:|:----:|:----:|   
-| Number of times the word appeared |  1  |  2   | 3    | 4    |5      |6      |7    | 8     |      9|   10 |   11 |   12|   13|   14|   15| 
-|  Number of words with this freq |  5389  |  1424   | 697    | 380    | 290      |227      |167    | 138     |      124|   92 |   79 |   65|   72|   51|   43|   
+| **Num** |  1  |  2   | 3    | 4    |5      |6      |7    | 8     |      9|   10 |   11 |   12|   13|   14|   15| 
+|  **Freq** |  5389  |  1424   | 697    | 380    | 290      |227      |167    | 138     |      124|   92 |   79 |   65|   72|   51|   43|   
 
 
 There is one word that appeared 317 times and one word that appeared 311 times. Most of the words that appeared more than 60 times are unique, for example only one word appeared 62 times and one word appeared 63 times. However, there are 4 words that appeared 56 times and 5 words that appeared 49 times.
@@ -139,10 +139,9 @@ tail(table(freq), 70)
 |   3|   1 |  1   |1     |1     |3      | 3   |1     | 1    |  3   |1      |  1   | 2   |3     | 2  | 2    | 1   |1    |  
 | 95 |  99 | 102| 103| 104| 105| 106| 107| 112| 114| 115| 118| 126| 129| 132| 133| 137| 139|  
 |   1|   1 |  1|   1|   1|   1|   1|   1|   1|   1|   1|   3|   1|   1|   1|   2|   1|   1|  
+| 142| 148| 157| 164| 167| 182| 196| 202| 205| 215| 233| 241| 256| 296| 311| 317|     
+|   2|   1|   1|   1|   1|   1|   1|   1|   1|   1|   1|   1|   1|   1|   1|   1|  
 
-
- 142 148 157 164 167 182 196 202 205 215 233 241 256 296 311 317   
-   2   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1  
 
 
 
