@@ -3,7 +3,6 @@ This [simple web application](https://wyquek71.shinyapps.io/shinyappassignment/)
 Just change the five slider values and see the probability value changes correspondingly.
 
 ![image of Webapp](https://github.com/qwyeow/JHU_DataScience/blob/master/ShinyApps/Heart_Disease_Predictor/Mockup.png)
-
 ### Documentation
 
 This Shiny Apps calculates the risk of having coronary heart disease, expressed in probabilily.
