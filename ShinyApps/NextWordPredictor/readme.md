@@ -313,4 +313,4 @@ p <- p + theme(axis.text.x=element_text(angle=45, hjust=1))+
 p
 
 ```
-  
+![image of trigram](https://github.com/qwyeow/JHU_DataScience/blob/master/ShinyApps/NextWordPredictor/trigram.png)    
