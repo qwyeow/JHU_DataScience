@@ -58,3 +58,41 @@ blogsummary
 |Punctuation | 	8018584 | 	529971 |	5976790 |
 |Digits | 	1015471 | 	177753 |	985537 |
 |Sentences | 	4346310 | 174879 | 2530958 |
+
+
+### Cleaning up the data
+
+1000 lines are selected randomly from each of the three files, totaling 3000 lines. These randomly selected lines are combined into one single file. A profanity list from the internet is used to censure vulgarities from the date. The data is converted to a corpus before removing certain characteristics that are not helpful in language modeling, such as
+
+1.    All casing are changed to lower casing.
+2.    Stopwords (e.g.“I”, “you”, “and”) are removed.
+3.    Numbers are removed.
+4.    Punctuation are removed.
+5.    White space are removed.
+
+The data is then “stem” so that root words (e.g. “arrive”, “arrived”, “arrival” are converted to “arriv”) are kept.
+
+```
+library(tm)
+library(ngram)
+set.seed(123)
+tweet_s <- sample(tweet, 1000, replace = FALSE, prob = NULL)
+news_s <- sample(news, 1000, replace = FALSE, prob = NULL)
+blog_s <- sample(blog, 1000, replace = FALSE, prob = NULL)
+
+all0 <- concatenate(tweet_s ,news_s , blog_s)
+all0 <- iconv(all0,   "UTF-8", "ASCII", "byte")
+all0 <- Corpus(VectorSource(all0))
+
+remove(tweet, news, blog, tweet_s, news_s, blog_s, tweetc, newsc, blogc)
+
+all0 <- tm_map(all0, content_transformer(tolower))
+profanity<-read.csv2("profanity_list.txt", sep = "\n")
+profanity <- readLines("profanity_list.txt")
+all0 <- tm_map(all0, removeWords, profanity)
+all0 <- tm_map(all0, removeWords, stopwords("english"))
+all0 <- tm_map(all0, removeNumbers)
+all0 <- tm_map(all0, removePunctuation)
+all0 <- tm_map(all0, stripWhitespace)
+all0 <- tm_map(all0, stemDocument)
+```
