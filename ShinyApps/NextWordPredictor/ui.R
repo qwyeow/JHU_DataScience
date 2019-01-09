@@ -10,8 +10,7 @@ shinyUI(fluidPage(
            
        ),
         mainPanel(
-        h3("The Most Probable Word and Its Corresponding Score:"),
-        #textOutput("output1")
+        h3("The Most Probable Word and Its Corresponding Score:"),      
         tableOutput("output1"),
         h4("1st column: the predicted word"),
         h6("The most likely word, followed by the next most likely, followed by the next next..."),
