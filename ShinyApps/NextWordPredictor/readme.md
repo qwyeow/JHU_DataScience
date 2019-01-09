@@ -96,3 +96,29 @@ all0 <- tm_map(all0, removePunctuation)
 all0 <- tm_map(all0, stripWhitespace)
 all0 <- tm_map(all0, stemDocument)
 ```
+
+## Frequency of word frequency
+
+The frequency of word frequency are presented below.
+```
+alltext <- tm_map(all0, PlainTextDocument)
+dtm <- DocumentTermMatrix(alltext)
+freq <- colSums(as.matrix(dtm))
+ord <- order(freq)
+freq[head(ord)]
+freq[tail(ord)]
+```
+From the output, we can see that there are 5389 words that appeared once and 1424 words that appeared twice. This suggests that the data is quite sparse.
+
+```
+head(table(freq), 15)
+```
+**Frequency**
+
+|    |      |      |      |       |      |      |      |      |       |         |     |      |      |      |  
+|:--- |:----:|:----:|:----:| :----:|:--- |:----:|:----:|:----:| :----:|   :----:|:--- |:----:|:----:|:----:|   
+|  1  |  2   | 3    | 4    |5      |6      |7    | 8     |      9|   10 |   11 |   12|   13|   14|   15| 
+|  5389  |  1424   | 697    | 380    | 290      |227      |167    | 138     |      124|   92 |   79 |   65|   72|   51|   43| 
+
+
+
