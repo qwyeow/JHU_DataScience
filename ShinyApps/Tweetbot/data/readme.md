@@ -1,1 +1,1 @@
-text files of 4 different female internet users, randomly selected and scraped from the internet to form the source text of tweetbot
+The source text came from four different, unrelated female internet users, randomly selected and scraped from the internet. The four text files were concatenated to create one source file to train the ngrams, upon which the tweetbot was built.
