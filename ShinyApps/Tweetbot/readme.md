@@ -2,7 +2,7 @@ Somehow [this tweetbot](https://wyquek71.shinyapps.io/Ahput4/), a project I crea
 
 ![image of tweetbot](https://github.com/qwyeow/JHU_DataScience/blob/master/ShinyApps/Tweetbot/tweetbot_screenshot.png)
 
- Asistant Professor Kearney is from the Informatics Institute, the School of Journalism, University of Missouri.
+ Michael Kearney is an Asistant Professor at the Informatics Institute, the School of Journalism, University of Missouri.
 
 
 
