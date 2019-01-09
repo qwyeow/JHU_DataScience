@@ -83,10 +83,6 @@
         unigram_and_score <- cbind(WordPredicted, WordScore, NgramSource)
 
         allscores <- rbind(fourgram_and_score, threegram_and_score, twogram_and_score)
-        #print(head(allscores,10))
-        #dup <- duplicated(allscores[ ,1])
-        #nodup <- allscores[!dup]
-        #return(head(nodup,10))
         top20 <-head(allscores,20)
         dup <- duplicated(top20[ ,1])
         nodup <- top20[!dup, ]
@@ -126,9 +122,6 @@
                 twogram_and_score <- cbind(lastword_1gram, Score_twogram)
                 
                 allscores <- rbind(fourgram_and_score, threegram_and_score, twogram_and_score)
-                #allscores <-data.frame(allscores)
-                #select(allscores, petal_length = Petal.Length)
-                #head(allscores,10)
                 dup <- duplicated(allscores[ ,1])
                 nodup <- allscores[!dup]
                 head(nodup,10)
