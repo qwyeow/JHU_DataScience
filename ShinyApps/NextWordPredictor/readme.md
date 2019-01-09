@@ -113,7 +113,8 @@ From the output, we can see that there are 5389 words that appeared once and 142
 ```
 head(table(freq), 15)
 ```
-**Num = Number of times the word appeared;Freq = number of words with this frequency**  
+**Num = Number of times the word appeared**  
+**Freq = number of words with this frequency**  
 
 
 |   |    |      |      |      |       |      |      |      |      |       |         |     |      |      |      |  
@@ -129,7 +130,8 @@ tail(table(freq), 70)
 
 ```
 
-**Num = Number of times the word appeared;Freq = number of words with this frequency** 
+**Num = Number of times the word appeared**
+**Freq = number of words with this frequency** 
  
  
 | | |    |      |      |      |       |      |      |      |      |       |       |     |      |    |      |     |     |  
@@ -139,9 +141,21 @@ tail(table(freq), 70)
 |**Num**|  68|  70 | 72   |73    |76    | 77    |78   |79    |80    |81    |82     |86    |87   | 88   |90  |91    |92   |94   |  
 |**Freq**|   3|   1 |  1   |1     |1     |3      | 3   |1     | 1    |  3   |1      |  1   | 2   |3     | 2  | 2    | 1   |1    |  
 |**Num**| 95 |  99 | 102| 103| 104| 105| 106| 107| 112| 114| 115| 118| 126| 129| 132| 133| 137| 139|  
-|   1|   1|   1 |  1|   1|   1|   1|   1|   1|   1|   1|   1|   3|   1|   1|   1|   2|   1|   1|  
+|**Freq*|   1|   1 |  1|   1|   1|   1|   1|   1|   1|   1|   1|   3|   1|   1|   1|   2|   1|   1|  
 |**Num**| 142| 148| 157| 164| 167| 182| 196| 202| 205| 215| 233| 241| 256| 296| 311| 317|     
 | **Freq**|   2|   1|   1|   1|   1|   1|   1|   1|   1|   1|   1|   1|   1|   1|   1|   1|  
+  
+  
+## Unigram Wordcloud
+
+A wordcloud of frequent one-words is created to help visualize the date.  
+```
+library(ggplot2)
+library(wordcloud)
+set.seed(123)
+tone <- brewer.pal(6, "Dark2")
+wordcloud(names(freq), freq, max.words=100, rot.per=0.2, colors=tone)
+```
 
 
 
