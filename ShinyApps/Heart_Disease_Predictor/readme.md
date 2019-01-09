@@ -4,7 +4,6 @@ Just change the five slider values and see the probability value changes corresp
 
 ![image of Webapp](https://github.com/qwyeow/JHU_DataScience/blob/master/ShinyApps/Heart_Disease_Predictor/Mockup.png)
 
-
 ### Documentation
 
 This Shiny Apps calculates the risk of having coronary heart disease, expressed in probabilily.
@@ -20,5 +19,7 @@ The minimum and maximum value of the slider are correspondinly the lowest and hi
 
 As one adjust the values of these five sliders, the probabilty of having coronary heart disease will change instansteanously based on each new combination of these five variables.
 
-The probabiltity of having coronary heart disease is calcualted based on logistic regression using chd as the response and five predictors.  The expit function is used to convert the log odds output into probabilities which lies between the value 0 and 1
+The probabiltity of having coronary heart disease is calcualted based on logistic regression using chd as the response and five predictors.  The expit function is used to convert the log odds output into probabilities which lies between the value 0 and 1.
+
+END
  
