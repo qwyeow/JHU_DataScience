@@ -4,10 +4,10 @@ library(readr)
 library(tokenizers)
 library(ngram)
 
-file1 <- readLines("random_girl1_forum.txt", encoding = "ASCII", skipNul = TRUE)
-file2 <- readLines("random_girl2_reddit.txt", encoding = "ASCII", skipNul = TRUE)
-file3 <- readLines("random_girl3_blogcomments.txt", encoding = "ASCII", skipNul = TRUE)
-file4 <- readLines("random_girl4_website.txt", encoding = "ASCII", skipNul = TRUE)
+file1 <- readLines("data/random_girl1_forum.txt", encoding = "ASCII", skipNul = TRUE)
+file2 <- readLines("data/random_girl2_reddit.txt", encoding = "ASCII", skipNul = TRUE)
+file3 <- readLines("data/random_girl3_blogcomments.txt", encoding = "ASCII", skipNul = TRUE)
+file4 <- readLines("data/random_girl4_website.txt", encoding = "ASCII", skipNul = TRUE)
 
 #concatenate all files into one
 allfiles <- c(file1,file2,file3,file4)  
