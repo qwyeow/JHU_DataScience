@@ -157,6 +157,55 @@ tone <- brewer.pal(6, "Dark2")
 wordcloud(names(freq), freq, max.words=100, rot.per=0.2, colors=tone)
 ```
 
+![Image of wordcloud](https://github.com/qwyeow/JHU_DataScience/blob/master/ShinyApps/NextWordPredictor/wordcloud.png)
 
 
+## Ngrams
 
+Unigram, bigram and trigrams are created using the ngram package. A frequency table and a bar graph are created for each ngram.
+
+```
+library(readr)
+all1 <- sapply(all0, function(x){all0$content})
+writeCorpus(all1, filenames = "corpus1.txt")
+all2 <- read_lines("corpus1.txt")
+
+ng1 <- ngram(all2, n=1)
+ng2 <- ngram(all2, n=2)
+ng3 <- ngram(all2, n=3)
+
+df1 <- get.phrasetable(ng1)
+df2 <- get.phrasetable(ng2)
+df3 <- get.phrasetable(ng3)
+
+```
+
+### Unigram
+
+The two most frequently occurring unigrams are “said” and “will”, both of which appeared more than 300 times. The word “know”, at 20th position, occurred more than 100 times.
+
+```
+head(df1,20)
+```
+
+##    ngrams freq        prop
+## 1   said   317 0.006546205
+## 2   will   311 0.006422303
+## 3    one   296 0.006112545
+## 4   like   256 0.005286526
+## 5   just   241 0.004976768
+## 6   time   233 0.004811564
+## 7   year   215 0.004439855
+## 8    get   205 0.004233351
+## 9    can   202 0.004171399
+## 10  make   196 0.004047496
+## 11   day   182 0.003758389
+## 12    go   176 0.003634486
+## 13  work   167 0.003448632
+## 14   new   164 0.003386680
+## 15 peopl   157 0.003242127
+## 16  love   148 0.003056273
+## 17    us   147 0.003035622
+## 18 think   142 0.002932370
+## 19   say   142 0.002932370
+## 20  know   139 0.002870418
