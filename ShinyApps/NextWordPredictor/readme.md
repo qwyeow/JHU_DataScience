@@ -224,4 +224,50 @@ p
 
 ```  
 
-![image of unigram](https://github.com/qwyeow/JHU_DataScience/blob/master/ShinyApps/NextWordPredictor/unigram.png)
+![image of unigram](https://github.com/qwyeow/JHU_DataScience/blob/master/ShinyApps/NextWordPredictor/unigram.png)  
+
+### Bigram
+
+The top twenty 2-grams appeared to be clustered between appearing 10 and 28 times.  
+
+```
+head(df2,20)
+
+```
+
+|ngrams|freq|prop|  
+|:---:|:---:|:---:|  
+| 1   | new york | 23 0.0004749711|  
+| 2   | high school | 23 0.0004749711|  
+| 3   |  last year | 23 0.0004749711|  
+| 4   | beep beep | 21 0.0004336693|  
+| 5   | feel like | 18 0.0003717165|  
+| 6   | year ago | 16 0.0003304147 |  
+| 7   | new jersey | 15 0.0003097638|  
+| 8   | right now | 15 0.0003097638 |  
+| 9   | last week | 14 0.0002891128 |  
+| 10  | one day | 14 0.0002891128 |  
+| 11  | look like | 12 0.0002478110|  
+| 12  | first time | 12 0.0002478110|  
+| 13  | look forward | 11 0.0002271601|  
+| 14  | will make | 11 0.0002271601|  
+| 15  | two year  |11 0.0002271601 |  
+| 16  | everi day | 11 0.0002271601|  
+| 17  |  st loui  | 10 0.0002065092 |  
+| 18  | unit state| 10 0.0002065092 |  
+| 19  |  next year| 10 0.0002065092 |  
+| 20  |  can get  |   9 0.0001858583|  
+  
+  
+```
+df2top <- head(df2,20)
+p <- ggplot(df2top, aes(x=reorder(ngrams, freq), y=freq))
+p <- p + geom_bar(stat="identity")
+p <- p + theme(axis.text.x=element_text(angle=45, hjust=1))+
+        xlab("2-gram")+
+        ylab("Frequency")
+p
+```
+
+
+
