@@ -51,8 +51,7 @@ shinyServer(function(input, output){
         predict<- eventReactive(input$tweets, {
                 i <- sample(2:5,1,prob = c(20,40,6,3))  
                 babbling <- babble(ngrams[[i]] , 50)
-                subbabbling <- unlist(strsplit(babbling, '[.]'))
-                #cat(subbabbling[[1]])
+                subbabbling <- unlist(strsplit(babbling, '[.]'))                
                 subbabbling[[1]]
         })
         
