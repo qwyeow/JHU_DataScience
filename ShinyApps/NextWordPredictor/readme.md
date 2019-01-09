@@ -228,7 +228,7 @@ p
 
 ### Bigram
 
-The top twenty 2-grams appeared to be clustered between appearing 10 and 28 times.  
+The top twenty bigrams appeared to be clustered between appearing 10 and 28 times.  
 
 ```
 head(df2,20)
@@ -273,7 +273,7 @@ p
 
 ## Trigram
 
-There are very few 3-grams with high counts. The highest is “beep beep beep” at 20 counts, which most likely is an anomaly. The second highest count is “presid barrack obama”, which is not surprising. Given the low word counts of 3-gram, relying too much on them to predict the next word may be counterproductive due to over-fitting.
+There are very few trigrams with high counts. The highest is “beep beep beep” at 20 counts, which most likely is an anomaly. The second highest count is “presid barrack obama”, which is not surprising. Given the low word counts of trigram, relying too much on them to predict the next word may be counterproductive due to over-fitting.
 
 ```
 head(df3,20)
