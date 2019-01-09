@@ -12,7 +12,7 @@ The data is downloaded from website https://d396qusza40orc.cloudfront.net/dsscap
 The size and length of each of the three files are shown below. All of them are large files, making it necessary to sample only a small portion of them for data exploration.
 
 ```
-setwd("D:/Books and Mag/Coursera notes/Module 10 Capstone/Week 1/Coursera-SwiftKey/final/en_US")
+setwd("D:/Coursera-SwiftKey/final/en_US")
 tweet <- readLines("en_US.twitter.txt", encoding = "UTF-8", skipNul = TRUE)
 news <- readLines("en_US.news.txt", encoding = "UTF-8", skipNul = TRUE)
 blog <- readLines("en_US.blogs.txt", encoding = "UTF-8", skipNul = TRUE)
@@ -23,3 +23,8 @@ newslength <- length(news)
 bloglength <-length(blog)
 blogsize <- file.size("en_US.blogs.txt")
 ```
+
+| File        | Tweeter           | News  | Blog  |
+| :------------- |:-------------:|:-----:|:------|
+|Size(MB) | 	1.671053410^{8}| 	2.058118910^{8}| 	2.101600110^{8}|
+|Length(lines)| 	2360148 |	77259| 	899288
