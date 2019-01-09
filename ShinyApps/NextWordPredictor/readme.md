@@ -224,3 +224,4 @@ p
 
 ```  
 
+![image of unigram](https://github.com/qwyeow/JHU_DataScience/blob/master/ShinyApps/NextWordPredictor/unigram.png)
